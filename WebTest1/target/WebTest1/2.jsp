@@ -1,0 +1,36 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标记</title>
+</head>
+<body>
+    <div>
+        <form action="/info" method="post">
+            <table align="left" id="form">
+                <tr>
+                    <th >商品编号</th>
+                    <td><input type="text" name="goodsnumber"></td>
+                </tr>
+                <tr>
+                    <th >商品名称</th>
+                    <td><input type="text" name="goodsname"></td>
+                </tr>
+                <tr>
+                    <th >商品价格</th>
+                    <td><input type="text" name="goodsprice"></td>
+                </tr>
+                <tr>
+                    <th >商品图片</th>
+                    <td><input value="浏览" type="file" name="goodsphoto" /></td>
+                </tr>
+                <tr>
+                    <th >商品描述</th>
+                    <td><textarea name="description"></textarea></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

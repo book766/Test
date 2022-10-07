@@ -17,7 +17,7 @@
 
         if(user.getName() == null || user.getPassword() == null){
             print.println("用户名或密码为空");
-            response.setHeader("Refresh", "2;URL=" + request.getContextPath() + "/Test4/modifyinfo.jsp");
+            response.setHeader("Refresh", "2;URL=" + request.getContextPath() + "/Test6/modifyinfo.jsp");
         }
     %>
 

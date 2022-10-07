@@ -5,11 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>WebTest3</artifactId>
+  <artifactId>JavaWebTest</artifactId>
   <version>1.0</version>
-  <packaging>war</packaging>
 
-  <name>WebTest3 Maven Webapp</name>
+  <modules>
+    <module>WebTest1</module>
+      <module>WebTest2</module>
+      <module>WebTest3</module>
+  </modules>
+
+  <packaging>pom</packaging>
+
+  <name>JavaWebTest Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -39,36 +46,10 @@
       <artifactId>javax.servlet.jsp-api</artifactId>
       <version>2.3.3</version>
     </dependency>
-
-    <dependency>
-      <groupId>taglibs</groupId>
-      <artifactId>standard</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>RELEASE</version>
-        <scope>compile</scope>
-    </dependency>
-
-    <!-- BeanUtils的依赖 -->
-    <dependency>
-      <groupId>commons-beanutils</groupId>
-      <artifactId>commons-beanutils</artifactId>
-      <version>1.9.4</version>
-    </dependency>
   </dependencies>
 
   <build>
-    <finalName>WebTest3</finalName>
+    <finalName>JavaWebTest</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -102,15 +83,5 @@
         </plugin>
       </plugins>
     </pluginManagement>
-      <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <configuration>
-                  <source>8</source>
-                  <target>8</target>
-              </configuration>
-          </plugin>
-      </plugins>
   </build>
 </project>
