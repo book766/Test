@@ -1,7 +1,7 @@
 <%@ page import="pojo.Book" %>
+<%@ page import="pojo.BookDB" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Map" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
@@ -10,8 +10,7 @@
 </head>
 <body>
     <%
-        List<String> books;
-        Map list = Book.booklist();
+        List<Book> books;
 
         String id = request.getParameter("bookid");
         if(id == null){
@@ -24,7 +23,7 @@
             session.setAttribute("books",books);
         }
 
-        books.add((String)list.get(id));
+        books.add(BookDB.GetBookById(id));
 
         Cookie cookie = new Cookie("username", "张三");
         cookie.setMaxAge(60);

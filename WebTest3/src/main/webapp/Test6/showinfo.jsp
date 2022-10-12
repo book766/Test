@@ -1,4 +1,3 @@
-<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -13,10 +12,8 @@
     <jsp:setProperty name="user" property="password" param="userpassword"/>
 
     <%
-        PrintWriter print = response.getWriter();
-
         if(user.getName() == null || user.getPassword() == null){
-            print.println("用户名或密码为空");
+            response.getWriter().println("用户名或密码为空");
             response.setHeader("Refresh", "2;URL=" + request.getContextPath() + "/Test6/modifyinfo.jsp");
         }
     %>
