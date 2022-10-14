@@ -5,20 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>JavaWebTest</artifactId>
+  <artifactId>WebTest5</artifactId>
   <version>1.0</version>
+  <packaging>war</packaging>
 
-  <modules>
-    <module>WebTest1</module>
-      <module>WebTest2</module>
-      <module>WebTest3</module>
-      <module>WebTest4</module>
-      <module>WebTest5</module>
-  </modules>
-
-  <packaging>pom</packaging>
-
-  <name>JavaWebTest Maven Webapp</name>
+  <name>WebTest5 Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -35,43 +26,10 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>javax.servlet.jsp-api</artifactId>
-      <version>2.3.3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>taglibs</groupId>
-      <artifactId>standard</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>RELEASE</version>
-      <scope>compile</scope>
-    </dependency>
-
   </dependencies>
 
   <build>
-    <finalName>JavaWebTest</finalName>
+    <finalName>WebTest5</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
