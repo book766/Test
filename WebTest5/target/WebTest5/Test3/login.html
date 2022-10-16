@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container w-25 p-5 my-5 border" id="login">
+        <form action="/WebTest5_war/login" method="post">
+            <div class="mb-3 mt-3">
+                <label for="text" class="form-label">User Name:</label>
+                <input type="text" class="form-control" id="text" placeholder="User Name" name="username">
+            </div>
+            <div style="text-align:center">
+                <button type="submit" class="btn btn-info ">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
