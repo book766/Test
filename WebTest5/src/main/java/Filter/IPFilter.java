@@ -2,53 +2,41 @@ package Filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @WebFilter(filterName = "IPFilter",urlPatterns = "/test")
 public class IPFilter implements Filter {
-    private String StartIP;
-    private String EndIP;
-    private String LocalIP;
+    private int StartIP;
+    private int EndIP;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         ServletContext context = filterConfig.getServletContext();
-        StartIP = (String)context.getInitParameter("StartIP");
-        EndIP  = (String)context.getInitParameter("EndIP");
-        LocalIP = (String)context.getInitParameter("LocalIP");
+//        StartIP = Integer.parseInt(context.getInitParameter("StartIP").replace(".",""));
+//        EndIP  = Integer.parseInt(context.getInitParameter("EndIP").replace(".",""));
     }
 
     @Override
-    public void doFilter(ServletRequest req, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest request = (HttpServletRequest) req;
-        String VisitIP = request.getRemoteAddr();
-        if(VisitIP.equals(LocalIP)){
-            chain.doFilter(request, response);
-        }
-
-        String[] VisitIPDetail = VisitIP.split(".");
-        String[] StartIPDetail = StartIP.split(".");
-        String[] EndIPDetail = EndIP.split(".");
-
-//        if(!VisitIPDetail[0].equals(StartIPDetail[0]) && !VisitIPDetail[0].equals(EndIPDetail[0])){
-//            return ;
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+//        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+//        HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+//
+//        String accessip = httpServletRequest.getRemoteAddr();
+//
+//        if(httpServletRequest.getServerName().equals("localhost")){
+//            accessip = "localhost";
 //        }
 //
-//        if(!VisitIPDetail[1].equals(StartIPDetail[1]) && !VisitIPDetail[1].equals(EndIPDetail[1])){
-//            return ;
+//        httpServletRequest.setAttribute("ip",accessip);
+//        int ip = Integer.parseInt(accessip.replace(".",""));
+//        if(ip < StartIP || ip > EndIP){
+//            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/Test2/iperroe.jsp");
+//        } else {
+//            chain.doFilter(request, response);
 //        }
-//
-//        if(VisitIPDetail[2] < ){
-//            return ;
-//        }
-
-        // 放行
-        chain.doFilter(request, response);
     }
 
     @Override
     public void destroy() {
-
     }
 }

@@ -24,7 +24,7 @@ public class LogoutServlet extends HttpServlet {
         log.info(info);
         Utils.record(info);
 
-        request.getSession().removeAttribute("user");
+        request.getSession().invalidate();
 
         response.sendRedirect(request.getContextPath() + "/Test3/login.html");
     }

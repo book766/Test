@@ -13,10 +13,6 @@
     <%
         UserList userlist = (UserList)application.getAttribute("onlineuserlist");
 
-        if(userlist == null){
-            request.getRequestDispatcher("/Test3/login.html").forward(request, response);
-        }
-
         List<String> list = userlist.GetUserList();
     %>
 
