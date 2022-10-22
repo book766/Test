@@ -5,6 +5,7 @@
     <title>增加信息</title>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
     <div class="container mt-3 w-50">
@@ -39,5 +40,34 @@
     <div align="center">
         <a href="${pageContext.request.contextPath}/student/list" class="btn btn-info" role="button">返回首页</a>
     </div>
+
+    <script>
+        //检查用户名或密码是否为空
+        $(document).ready(function() {
+            $("button").click(function () {
+                let name = $("input[name='stud_name']").val();
+                let gender = $("input[name='stud_gender']").val();
+                let address = $("input[name='stud_address']").val();
+                let phone = $("input[name='stud_phone']").val();
+
+                if(name == ""){
+                    alert("学生姓名为空");
+                    return false;
+                }
+                if(gender == ""){
+                    alert("学生性别为空！");
+                    return false;
+                }
+                if(address == ""){
+                    alert("学生地址为空！");
+                    return false;
+                }
+                if(phone == ""){
+                    alert("学生手机号为空！");
+                    return false;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

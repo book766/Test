@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//删除信息
 @WebServlet(name = "DeleteServlet",urlPatterns="/student/delete")
 public class DeleteServlet extends HttpServlet {
     private StudentService studentService = new StudentService();

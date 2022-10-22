@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+//查询所有信息
 @WebServlet(name = "ListServlet",urlPatterns="/student/list")
 public class ListServlet extends HttpServlet {
     private StudentService studentService = new StudentService();

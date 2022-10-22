@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//查询单个信息
 @WebServlet(name = "SelectServlet",urlPatterns="/student/search")
 public class SelectServlet extends HttpServlet {
     private StudentService studentService = new StudentService();

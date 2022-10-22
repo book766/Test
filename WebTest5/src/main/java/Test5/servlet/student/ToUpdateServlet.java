@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//修改信息跳转
 @WebServlet(name = "ToUpdateServlet",urlPatterns="/student/toupdate")
 public class ToUpdateServlet extends HttpServlet {
     private StudentService studentService = new StudentService();
